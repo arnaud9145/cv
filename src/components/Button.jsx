@@ -4,7 +4,6 @@ import './styles/button.css'
 const Button = props => (
     <button
         className={props.selected ? 'selected' : ''}
-        onClick={props.onClick}
         type='primary'
     >
         {props.children}
