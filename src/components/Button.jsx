@@ -1,6 +1,12 @@
 import React from 'react'
-import { Button as AntButton } from 'antd'
 import './styles/button.css'
 
-const Button = props => (<AntButton className={props.selected ? 'selected' : ''} type='primary'>{props.children}</AntButton>)
+const Button = props => (
+    <button
+        className={props.selected ? 'selected' : ''}
+        onClick={props.onClick}
+        type='primary'
+    >
+        {props.children}
+    </button>)
 export default Button

@@ -1,6 +1,6 @@
 .App {
   text-align: center;
 }
-.App > body {
+.App > .body {
   padding-top: 60px;
 }

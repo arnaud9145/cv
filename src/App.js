@@ -1,17 +1,9 @@
 import React from 'react'
 import './App.css'
 import 'antd/dist/antd.css'
-import Header from './components/Header'
-
+import Main from './Main'
 function App() {
-  return (
-    <div className='App'>
-      <Header />
-      <body>
-        <p>yoo</p>
-      </body>
-    </div>
-  )
+  return <Main />
 }
 
 export default App
