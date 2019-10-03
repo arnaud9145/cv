@@ -1,0 +1,23 @@
+.ant-btn-primary {
+  height: 100%;
+  width: 10%;
+  color: white;
+  background-color: #2e2e2e;
+  border-color: #2e2e2e;
+  border-radius: 0px;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+.ant-btn-primary:focus,
+.selected {
+  background-color: #2e2e2e;
+  border-color: white;
+  border-width: 0 0 4px 0;
+}
+
+.ant-btn-primary:hover {
+  color: #2e2e2e;
+  background-color: white;
+  border-color: #2e2e2e;
+  border-color: white;
+}

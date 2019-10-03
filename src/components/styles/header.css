@@ -1,0 +1,40 @@
+.ant-btn-primary.button_header {
+  background-color: transparent;
+  height: 50px;
+  border-color: transparent;
+}
+header {
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  top: 0;
+  background-color: #2e2e2e;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.a-intro__main-text {
+  color: black;
+  font-size: 40px;
+  padding-bottom: 5px;
+  letter-spacing: 3px;
+  margin-left: 20px;
+}
+.button_header {
+  color: white;
+  font-size: 30px;
+  padding-bottom: 5px;
+  background-color: black;
+  letter-spacing: 2px;
+  margin-left: 10px;
+  padding-left: 30px;
+}
+
+@media screen and (max-width: 350px) {
+  .a-intro-header__nav__mobile .a-intro-header__mainButton {
+    left: 100%;
+    transform: translateX(calc(-100% - 10px));
+  }
+}
