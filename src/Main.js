@@ -6,7 +6,7 @@ class App extends React.PureComponent {
     super(props)
     this.state = {
       selected: null,
-      scrolling: false
+      scrolling: true
     }
   }
 
@@ -61,20 +61,22 @@ class App extends React.PureComponent {
         threshold: 0.6
       }
     ).observe(document.querySelector('#contact'))
-
-    let { pathname } = this.props.location
-    pathname = pathname.substr(1, pathname.length)
-    if (pathname === '') pathname = 'profile'
-    const element = document.getElementById(pathname)
-    if (element) {
-      element.scrollIntoView({
-        behavior: 'auto',
-        block: 'end',
-        inline: 'nearest'
-      })
-      const destination = '/' + pathname
-      this.setState({ selected: destination, scrolling: true })
-    }
+    setTimeout(() => {
+      let { pathname } = this.props.location
+      pathname = pathname.substr(1, pathname.length)
+      if (pathname === '') pathname = 'profile'
+      const element = document.getElementById(pathname)
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'end',
+          inline: 'nearest'
+        })
+        let destination = '/' + pathname
+        if (destination === '/profile') destination = '/'
+        this.setState({ selected: destination, scrolling: true })
+      }
+    }, 1000)
   }
 
   static getDerivedStateFromProps(props, state) {
@@ -98,7 +100,6 @@ class App extends React.PureComponent {
   }
   render() {
     const { location } = this.props
-    console.log(this.state.scrolling)
 
     return (
       <div className='App'>
