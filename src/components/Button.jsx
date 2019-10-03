@@ -1,6 +1,14 @@
 import React from 'react'
-import { Button as AntButton } from 'antd'
+import { Link } from 'react-router-dom'
 import './styles/button.css'
 
-const Button = props => (<AntButton className={props.selected ? 'selected' : ''} type='primary'>{props.children}</AntButton>)
+const Button = props => (
+  <Link
+    className={props.selected ? 'custom-button selected' : 'custom-button'}
+    to={props.to}
+    type='primary'
+  >
+    {props.children}
+  </Link>
+)
 export default Button

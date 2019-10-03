@@ -1,21 +1,26 @@
-.ant-btn-primary {
+.custom-button {
   height: 100%;
   width: 10%;
   color: white;
   background-color: #2e2e2e;
-  border-color: #2e2e2e;
+  border: 2px solid #2e2e2e;
   border-radius: 0px;
   margin-left: 1px;
   margin-right: 1px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.ant-btn-primary:focus,
 .selected {
+  background: none;
   background-color: #2e2e2e;
-  border-color: white;
   border-width: 0 0 4px 0;
+  border-color: white;
+  outline: 0;
 }
 
-.ant-btn-primary:hover {
+.custom-button:hover {
   color: #2e2e2e;
   background-color: white;
   border-color: #2e2e2e;
