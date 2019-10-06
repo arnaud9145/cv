@@ -1,0 +1,22 @@
+#profile {
+  background-color: blue;
+}
+
+.profile {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.profile > h1 {
+  color: white;
+}
+.profile > h2 {
+  color: white;
+}
+.avatar {
+  border-radius: 50%;
+  width: 15%;
+}
