@@ -40,36 +40,42 @@ const starOrder = (a, b) => {
 const Abilities = () => {
   skills = skills.sort(starOrder)
   languages = languages.sort(starOrder)
-  const leftSkills = skills.filter((skill, index) => index % 2 === 0)
-  const rightSkills = skills.filter((skill, index) => index % 2 === 1)
-  const leftLanguages = languages.filter((language, index) => index % 2 === 0)
-  const rightLanguages = languages.filter((language, index) => index % 2 === 1)
+  const leftSkills = skills.filter((skill, index) => index < skills.length / 2)
+  const rightSkills = skills.filter(
+    (skill, index) => index >= skills.length / 2
+  )
+  const leftLanguages = languages.filter(
+    (language, index) => index < languages.length / 2
+  )
+  const rightLanguages = languages.filter(
+    (language, index) => index >= languages.length / 2
+  )
   return (
     <div className='abilities' id='abilities'>
       <h1>Compétences</h1>
       <div className='skills'>
         <h2>Développement</h2>
         <div className='left'>
-          {leftSkills.map(item => (
-            <Skill stars={item.stars}>{item.name}</Skill>
+          {leftSkills.map((item, index) => (
+            <Skill key={index} stars={item.stars}>{item.name}</Skill>
           ))}
         </div>
         <div className='right'>
-          {rightSkills.map(item => (
-            <Skill stars={item.stars}>{item.name}</Skill>
+          {rightSkills.map((item, index) => (
+            <Skill key={index} stars={item.stars}>{item.name}</Skill>
           ))}
         </div>
       </div>
       <div className='skills'>
         <h2>Langues</h2>
         <div className='left'>
-          {leftLanguages.map(item => (
-            <Skill stars={item.stars}>{item.name}</Skill>
+          {leftLanguages.map((item, index) => (
+            <Skill key={index} stars={item.stars}>{item.name}</Skill>
           ))}
         </div>
         <div className='right'>
-          {rightLanguages.map(item => (
-            <Skill stars={item.stars}>{item.name}</Skill>
+          {rightLanguages.map((item, index) => (
+            <Skill key={index} stars={item.stars}>{item.name}</Skill>
           ))}
         </div>
       </div>

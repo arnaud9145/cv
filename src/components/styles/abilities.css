@@ -3,7 +3,7 @@
 }
 
 .abilities {
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -19,22 +19,23 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 70%;
-}
-.skills > * {
-  padding: 10px;
-  width: 50%;
+  width: 80%;
+  margin-bottom: 20px;
 }
 .skills > h2 {
-  padding: 0;
   width: 80%;
   color: white;
   text-align: left;
 }
 .skill {
+  padding: 2px 8px 2px 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 17px;
   color: white;
+  min-width: 375px;
+}
+.skill:hover {
+  background-color: rgb(92, 92, 92);
 }
