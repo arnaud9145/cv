@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './components/Header'
 import Profile from './components/Profile'
 import Contact from './components/Contact'
+import Abilities from './components/Abilities'
 
 class App extends React.PureComponent {
   constructor(props) {
@@ -111,9 +112,7 @@ class App extends React.PureComponent {
           <div className='content' id='experiences'>
             <div>2</div>
           </div>
-          <div className='content' id='abilities'>
-            <div>3</div>
-          </div>
+          <Abilities/>
           <div className='content' id='projects'>
             <div>4</div>
           </div>
