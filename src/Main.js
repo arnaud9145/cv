@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from './components/Header'
+import Profile from './components/Profile'
 
 class App extends React.PureComponent {
   constructor(props) {
@@ -105,20 +106,18 @@ class App extends React.PureComponent {
       <div className='App'>
         <Header selected={location.pathname} />
         <div className='body'>
-          <div className='content'>
-            <div id='profile'>1</div>
+          <Profile/>
+          <div className='content' id='experiences'>
+            <div>2</div>
           </div>
-          <div className='content'>
-            <div id='experiences'>2</div>
+          <div className='content' id='abilities'>
+            <div>3</div>
           </div>
-          <div className='content'>
-            <div id='abilities'>3</div>
+          <div className='content' id='projects'>
+            <div>4</div>
           </div>
-          <div className='content'>
-            <div id='projects'>4</div>
-          </div>
-          <div className='content'>
-            <div id='contact'>5</div>
+          <div className='content' id='contact'>
+            <div>5</div>
           </div>
         </div>
       </div>
