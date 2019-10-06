@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './components/Header'
 import Profile from './components/Profile'
 import Contact from './components/Contact'
+import Abilities from './components/Abilities'
 
 class App extends React.PureComponent {
   constructor(props) {
@@ -89,8 +90,7 @@ class App extends React.PureComponent {
       if (element) {
         element.scrollIntoView({
           behavior: 'smooth',
-          block: 'end',
-          inline: 'nearest'
+          block: 'nearest'
         })
         let destination = '/' + search
         if (destination === '/profile') destination = '/'
@@ -107,17 +107,15 @@ class App extends React.PureComponent {
       <div className='App'>
         <Header selected={location.pathname} />
         <div className='body'>
-          <Profile/>
+          <Profile />
           <div className='content' id='experiences'>
             <div>2</div>
           </div>
-          <div className='content' id='abilities'>
-            <div>3</div>
-          </div>
+          <Abilities />
           <div className='content' id='projects'>
             <div>4</div>
           </div>
-          <Contact/>
+          <Contact />
         </div>
       </div>
     )
