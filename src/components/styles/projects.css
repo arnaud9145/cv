@@ -1,0 +1,29 @@
+#projects {
+  background-color: rgb(102, 102, 102);
+}
+
+.projects {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5%;
+}
+
+.projects > h1 {
+  color: white;
+  font-size: 45px;
+}
+.projects > div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.projects > div > h2 {
+  width: 80%;
+  color: white;
+  text-align: left;
+}

@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Profile from './components/Profile'
 import Contact from './components/Contact'
 import Abilities from './components/Abilities'
+import Projects from './components/Projects'
 
 class App extends React.PureComponent {
   constructor(props) {
@@ -112,9 +113,7 @@ class App extends React.PureComponent {
             <div>2</div>
           </div>
           <Abilities />
-          <div className='content' id='projects'>
-            <div>4</div>
-          </div>
+          <Projects/>
           <Contact />
         </div>
       </div>
